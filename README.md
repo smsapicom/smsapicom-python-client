@@ -1,6 +1,7 @@
 ﻿python-client
 =============
 
+Client in Python that allows to send SMS messages and managing account in SMSAPI.com service.
 Klient napisany w języku Python, pozwalający na wysyłanie wiadomości SMS, MMS, VMS oraz zarządzanie kontem w serwisie SMSAPI.pl
 
 EXAMPLES:
