@@ -9,7 +9,7 @@ class SmsAPI(object):
     def __init__(self, username=None, password=None):
         super(SmsAPI, self).__init__()
 
-        self.api_url = 'https://api.smsapi.pl/'
+        self.api_url = 'https://api.smsapi.com/'
 
         self.response_format = 'json'
 

@@ -2,7 +2,6 @@
 =============
 
 Client in Python that allows to send SMS messages and managing account in SMSAPI.com service.
-Klient napisany w języku Python, pozwalający na wysyłanie wiadomości SMS, MMS, VMS oraz zarządzanie kontem w serwisie SMSAPI.pl
 
 EXAMPLES:
 ```python
@@ -22,7 +21,7 @@ EXAMPLES:
         api.set_content('Hello [%1%] [%2%]')
         api.set_params('name', 'last name')
         api.set_to('60xxxxxxx')
-        api.set_from('Info') #Pole nadawcy lub typ wiadomość 'ECO', '2Way'
+        api.set_from('Info') #Requested sender name
     
         result = api.execute()
     
@@ -33,16 +32,16 @@ EXAMPLES:
         print '%s - %s' % (e.code, e.message)
 ```
 
-Przykład zmiany adresu serwera na zapasowy:
+Backup server using example:
 
 ```python
     api = SmsAPI()
-    api.set_hostname('https://api2.smsapi.pl/') #Zapasowy serwer
+    api.set_hostname('https://api2.smsapi.com/') #Backup server
 ```
 
 ## LICENSE
-[Apache 2.0 License](https://github.com/smsapi/smsapi-python-client/blob/master/LICENSE)
+[Apache 2.0 License](https://github.com/smsapicom/smsapicom-python-client/blob/master/LICENSE)
 
 
 ## INFO ABOUT DEPRECATED MODULES
-Module for phonebook endpoints is deprecated, please use https://github.com/smsapi/smsapi-contacts-python-client
+Module for phonebook endpoints is deprecated, please use https://github.com/smsapicom/smsapicom-contacts-python-client

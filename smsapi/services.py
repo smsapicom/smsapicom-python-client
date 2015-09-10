@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from .actions import sms, mms, vms, sender, client, phonebook, hlr
+from .actions import sms, sender, client, phonebook, hlr
 
 class Service(object):
     
@@ -23,40 +23,6 @@ class ServiceSms(Service):
 
     def action_delete(self):
         return sms.DeleteAction(self.proxy, self.service_uri)
-
-
-class ServiceMms(Service):
-
-    service_uri = 'mms.do'
-
-    def __init__(self, proxy):
-        super(ServiceMms, self).__init__(proxy)
-
-    def action_send(self):
-        return mms.SendAction(self.proxy, self.service_uri)
-    
-    def action_get(self):
-        return mms.GetAction(self.proxy, self.service_uri)
-
-    def action_delete(self):
-        return mms.DeleteAction(self.proxy, self.service_uri)
-
-
-class ServiceVms(Service):
-
-    service_uri = 'vms.do'    
-    
-    def __init__(self, proxy):
-        super(ServiceVms, self).__init__(proxy)
-
-    def action_send(self):
-        return vms.SendAction(self.proxy, self.service_uri)
-
-    def action_get(self):
-        return vms.GetAction(self.proxy, self.service_uri)
-
-    def action_delete(self):
-        return vms.DeleteAction(self.proxy, self.service_uri)
 
 
 class ServiceClient(Service):
