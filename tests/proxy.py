@@ -9,7 +9,7 @@ class ApiProxyTestCase(SmsApiTestCase):
 
     def setUp(self):
         
-        self.proxy = ApiHttpProxy('https://api.smsapi.com/')
+        self.proxy = ApiHttpProxy('https://smsapi.com/')
 
     def test_connection(self):
         result = self.proxy.execute()
